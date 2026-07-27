@@ -9,7 +9,10 @@
 }
 
 html {
+  --header-offset: 5.75rem;
   scroll-behavior: smooth;
+  /* sticky ヘッダー分だけ、アンカー着地を下げる */
+  scroll-padding-top: var(--header-offset);
 }
 
 body {
@@ -285,6 +288,10 @@ body[data-theme="mori"] {
   }
 }
 
+body.is-nav-lock {
+  overflow: hidden;
+}
+
 /* ---------- Hero ---------- */
 
 .hero {
@@ -324,20 +331,66 @@ body[data-theme="mori"] {
 }
 
 @media (max-width: 720px) {
-  .hero__book {
-    width: 72%;
-    opacity: 0.42;
-    object-position: 70% top;
-    filter: none;
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    color: var(--ink);
+    background: var(--bg);
   }
 
+  .hero__content {
+    order: 1;
+    max-width: none;
+    padding: 2rem clamp(1.25rem, 4vw, 3rem) 1.5rem;
+  }
+
+  .hero__media {
+    position: relative;
+    order: 2;
+    inset: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1.25rem 2.25rem;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated) 100%);
+  }
+
+  .hero__backdrop,
   .hero__veil {
-    background: linear-gradient(
-      180deg,
-      rgba(18, 36, 28, 0.72) 0%,
-      rgba(18, 36, 28, 0.88) 55%,
-      rgba(18, 36, 28, 0.94) 100%
-    );
+    display: none;
+  }
+
+  .hero__book {
+    position: relative;
+    inset: auto;
+    width: min(58%, 13.5rem);
+    height: auto;
+    object-fit: contain;
+    object-position: center top;
+    opacity: 1;
+    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.18));
+    animation: none;
+  }
+
+  .hero__lead {
+    color: var(--ink-muted);
+  }
+
+  .hero .btn--primary {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .hero .btn--ghost {
+    border-color: color-mix(in srgb, var(--brand) 28%, transparent);
+    color: var(--brand);
+    background: transparent;
+  }
+
+  .hero .btn--ghost:hover {
+    background: var(--accent-soft);
   }
 }
 
@@ -353,14 +406,6 @@ body[data-theme="mori"] {
   padding: clamp(2.5rem, 8vh, 5rem) clamp(1.25rem, 4vw, 3rem) clamp(3rem, 8vh, 5.5rem);
   max-width: 40rem;
   animation: rise-in 0.9s ease-out both;
-}
-
-.hero__logo {
-  display: block;
-  width: auto;
-  height: clamp(4.5rem, 12vw, 6.5rem);
-  margin: 0 0 1.1rem;
-  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.25));
 }
 
 .hero__brand {
@@ -588,7 +633,7 @@ body[data-theme="mori"] {
 .profile__portrait {
   margin: 0;
   position: sticky;
-  top: 5rem;
+  top: var(--header-offset);
 }
 
 @media (max-width: 800px) {
