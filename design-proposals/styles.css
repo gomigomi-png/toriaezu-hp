@@ -237,8 +237,9 @@ body[data-theme="enpaku"] {
 
 .wordmark {
   display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
   font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 600;
@@ -246,6 +247,22 @@ body[data-theme="enpaku"] {
   text-decoration: none;
   color: var(--brand);
   line-height: 1.25;
+}
+
+.wordmark__logo {
+  display: block;
+  width: auto;
+  height: 2.55rem;
+  flex-shrink: 0;
+  filter: brightness(0);
+  opacity: 0.88;
+}
+
+.wordmark__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  min-width: 0;
 }
 
 .wordmark__name {
@@ -259,6 +276,16 @@ body[data-theme="enpaku"] {
   letter-spacing: 0.06em;
   color: var(--ink-muted);
   line-height: 1.3;
+}
+
+.wordmark__en {
+  font-family: var(--font-body);
+  font-size: 0.52rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--ink-muted);
+  line-height: 1.3;
+  text-transform: uppercase;
 }
 
 .nav {
@@ -339,6 +366,14 @@ body[data-theme="enpaku"] {
   animation: rise-in 0.9s ease-out both;
 }
 
+.hero__logo {
+  display: block;
+  width: auto;
+  height: clamp(4.5rem, 12vw, 6.5rem);
+  margin: 0 0 1.1rem;
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.25));
+}
+
 .hero__brand {
   margin: 0 0 0.2rem;
   font-family: var(--font-display);
@@ -349,13 +384,24 @@ body[data-theme="enpaku"] {
 }
 
 .hero__tm {
-  margin: 0 0 1.5rem;
+  margin: 0 0 0.35rem;
   font-family: var(--font-body);
   font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   opacity: 0.78;
   line-height: 1.4;
+}
+
+.hero__en {
+  margin: 0 0 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  opacity: 0.72;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .hero__title {
@@ -612,7 +658,7 @@ body[data-theme="enpaku"] {
 .officers__list {
   margin: 0;
   padding: 0;
-  max-width: 28rem;
+  max-width: 40rem;
 }
 
 .officers__row {
@@ -638,11 +684,37 @@ body[data-theme="enpaku"] {
 
 .officers__row dd {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
   font-family: var(--font-display);
   font-size: 1.05rem;
   letter-spacing: 0.12em;
   color: var(--ink);
   font-weight: 600;
+}
+
+.officers__name {
+  display: block;
+}
+
+.officers__affiliation {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.officers__subhead {
+  margin: 2.25rem 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--brand);
 }
 
 /* ---------- Book ---------- */
@@ -745,6 +817,201 @@ body[data-theme="enpaku"] {
   margin: 0 0 0.65rem;
   color: var(--ink-muted);
   font-size: 0.92rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.party__when,
+.party__where {
+  display: block;
+  line-height: 1.5;
+}
+
+.party__when {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.party__item--detailed {
+  align-items: start;
+}
+
+.party__main {
+  min-width: 0;
+}
+
+.party__snapshot {
+  margin: 0 0 0.85rem;
+  color: var(--ink-muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  max-width: 40em;
+}
+
+.party__details {
+  margin-top: 1rem;
+}
+
+.party__details-summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  user-select: none;
+}
+
+.party__details-summary::-webkit-details-marker {
+  display: none;
+}
+
+.party__details-summary::after {
+  content: "＋";
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.party__details[open] .party__details-summary::after {
+  content: "−";
+}
+
+.party__details-summary:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.party__details-body {
+  margin-top: 1.35rem;
+  padding-top: 0.25rem;
+  display: grid;
+  gap: 1.75rem;
+  max-width: 40rem;
+}
+
+.party__block-title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--brand);
+}
+
+.party__plain-list,
+.party__notes,
+.party__program {
+  margin: 0;
+  padding: 0;
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.party__plain-list {
+  list-style: none;
+}
+
+.party__plain-list li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.party__plain-list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.party__notes {
+  list-style: none;
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.party__notes li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.86rem;
+}
+
+.party__notes li::before {
+  content: "＊";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.party__fee {
+  margin: 0;
+}
+
+.party__fee-row {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+
+.party__fee-row:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.party__fee-row dt {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.party__fee-row dd {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.party__note-inline {
+  margin: 0.75rem 0 0;
+  font-size: 0.86rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+.party__program {
+  list-style: none;
+  counter-reset: program;
+}
+
+.party__program li {
+  counter-increment: program;
+  display: grid;
+  grid-template-columns: 1.75rem 1fr;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.party__program li:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.party__program li::before {
+  content: counter(program);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
 }
 
 .block#contact .block__body > p {
@@ -760,8 +1027,15 @@ body[data-theme="enpaku"] {
 
 .wordmark--footer {
   color: var(--footer-ink);
-  margin: 0 0 0.75rem;
+  margin: 0 auto 0.75rem;
   display: inline-flex;
+  justify-content: center;
+}
+
+.wordmark--footer .wordmark__logo {
+  filter: none;
+  opacity: 0.95;
+  height: 2.35rem;
 }
 
 .site-footer__sub {

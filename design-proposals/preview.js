@@ -1,6 +1,6 @@
 const notes = {
   aisumi: "藍墨 — 知性と静けさ。紺基調。見出しは各セクション上部に配置。",
-  mori: "杜（採用予定）— 落ち着いた緑。Zen Old Mincho × Noto Sans JP。",
+  mori: "杜（採用）— 落ち着いた緑。Zen Old Mincho × Noto Sans JP。",
   enpaku: "鉛白 — 現代的なグレーに朱の差し色。Noto Serif JP × Zen Kaku Gothic New。",
 };
 
