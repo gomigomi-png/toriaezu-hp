@@ -3,41 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>とりあえず研究所 — デザイン見本（案2 杜）</title>
+  <title>とりあえず研究所</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- 案1 藍墨 -->
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" />
-  <!-- 案2 杜 -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&family=Zen+Old+Mincho:wght@500;600;700&display=swap" rel="stylesheet" />
-  <!-- 案3 鉛白 -->
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-theme="mori">
-  <aside class="chooser" aria-label="デザイン案の切り替え">
-    <p class="chooser__label">採用確定 · 案2 杜（他案も比較可）</p>
-    <div class="chooser__tabs" role="tablist">
-      <button type="button" class="chooser__tab" data-theme="aisumi" role="tab" aria-selected="false">
-        <span class="chooser__swatch chooser__swatch--aisumi" aria-hidden="true"></span>
-        案1 藍墨
-      </button>
-      <button type="button" class="chooser__tab is-active" data-theme="mori" role="tab" aria-selected="true">
-        <span class="chooser__swatch chooser__swatch--mori" aria-hidden="true"></span>
-        案2 杜（採用）
-      </button>
-      <button type="button" class="chooser__tab" data-theme="enpaku" role="tab" aria-selected="false">
-        <span class="chooser__swatch chooser__swatch--enpaku" aria-hidden="true"></span>
-        案3 鉛白
-      </button>
-    </div>
-    <p class="chooser__note" id="theme-note">
-      杜（採用）— 落ち着いた緑。キャンパスや研究の生命感。Zen Old Mincho × Noto Sans JP。
-    </p>
-  </aside>
-
   <header class="site-header">
-    <a class="wordmark" href="#">
+    <a class="wordmark" href="./">
       <img
         class="wordmark__logo"
         src="images/toriaezu-logo.png"
@@ -90,13 +64,13 @@
           width="160"
           height="120"
         />
-        <p class="hero__brand">とりあえず研究所</p>
+        <h1 class="hero__brand">とりあえず研究所</h1>
         <p class="hero__meta">
           <span class="hero__tm"><span aria-hidden="true">®</span>Career Power Spot</span>
           <span class="hero__meta-sep" aria-hidden="true">／</span>
           <span class="hero__en">TORIAEZU INSTITUTE</span>
         </p>
-        <h1 class="hero__title">「とりあえず」から、<br />キャリアの道はひらける。</h1>
+        <p class="hero__title">「とりあえず」から、<br />キャリアの道はひらける。</p>
         <p class="hero__lead">
           曖昧な進路選択を実証的に探究し、若者と社会をつなぐ知見を深める研究所です。
         </p>
@@ -147,12 +121,15 @@
                 <p class="profile__reading">なかしま・つよし</p>
                 <p class="profile__role">帝京大学経済学部 教授　／　とりあえず研究所 理事長</p>
                 <p class="profile__bio">
-                  1974年、兵庫県生まれ。博士（経済学）。帝京大学経済学部教授。専門は労働経済学、キャリア形成論。論文「とりあえず志向と初期キャリア形成――地方公務員への入職行動の分析」（『日本労働研究雑誌』No.632）で第14回労働関係論文優秀賞（JILPT）を受賞。著書に『キャリアデザイン入門テキスト』（学事出版）、『とりあえず志向とキャリア形成』（日本評論社）、『若者の曖昧な進路選択とキャリア形成――とりあえず志向の実証的探究』（晃洋書房）、『ブラック企業に負けないリーガル・リテラシー』（萌書房）などがある。「とりあえず研究所」の理事長。
+                  1974年、兵庫県生まれ。博士（経済学）。帝京大学経済学部教授。専門は労働経済学、キャリア形成論。「とりあえず研究所」の理事長。
+                </p>
+                <p class="profile__bio">
+                  論文「とりあえず志向と初期キャリア形成――地方公務員への入職行動の分析」（『日本労働研究雑誌』No.632）で第14回労働関係論文優秀賞（JILPT）を受賞。主な論文・著書は<a class="text-link" href="#research">研究・実績</a>をご覧ください。
                 </p>
                 <p class="profile__links">
-                  <a class="text-link" href="https://ameblo.jp/kyarispo/" target="_blank" rel="noopener noreferrer">ブログ</a>
-                  <a class="text-link" href="https://researchmap.jp/read0143948" target="_blank" rel="noopener noreferrer">researchmap</a>
-                  <a class="text-link" href="https://x.com/career_pawasupo" target="_blank" rel="noopener noreferrer">公式X</a>
+                  <a class="text-link" href="https://ameblo.jp/kyarispo/" target="_blank" rel="noopener noreferrer" aria-label="ブログ（新しいタブで開く）">ブログ</a>
+                  <a class="text-link" href="https://researchmap.jp/read0143948" target="_blank" rel="noopener noreferrer" aria-label="researchmap（新しいタブで開く）">researchmap</a>
+                  <a class="text-link" href="https://x.com/career_pawasupo" target="_blank" rel="noopener noreferrer" aria-label="公式X（新しいタブで開く）">公式X</a>
                 </p>
               </div>
             </div>
@@ -238,7 +215,7 @@
                 <p>
                   ちくまプリマー新書。曖昧な選択の先にあるキャリア形成を、わかりやすく論じた一冊です。
                 </p>
-                <a class="text-link" href="https://www.chikumashobo.co.jp/product/9784480685599/" target="_blank" rel="noopener noreferrer">書籍情報を見る</a>
+                <a class="text-link" href="https://www.chikumashobo.co.jp/product/9784480685599/" target="_blank" rel="noopener noreferrer" aria-label="書籍情報を見る（新しいタブで開く）">書籍情報を見る</a>
               </div>
             </div>
 
@@ -272,7 +249,7 @@
                 </li>
               </ul>
               <p class="works__more">
-                <a class="text-link" href="https://researchmap.jp/read0143948" target="_blank" rel="noopener noreferrer">researchmapで一覧を見る</a>
+                <a class="text-link" href="https://researchmap.jp/read0143948" target="_blank" rel="noopener noreferrer" aria-label="researchmapで一覧を見る（新しいタブで開く）">researchmapで一覧を見る</a>
               </p>
             </div>
           </div>
@@ -300,7 +277,7 @@
                   </p>
                   <div class="party__actions">
                     <span class="btn btn--small btn--disabled" aria-disabled="true">申し込み準備中</span>
-                    <a class="text-link" href="flyer-party-chiba.html" target="_blank" rel="noopener noreferrer">フライヤー</a>
+                    <a class="text-link" href="flyer-party-chiba.html" target="_blank" rel="noopener noreferrer" aria-label="フライヤー（新しいタブで開く）">フライヤー</a>
                   </div>
                   <details class="party__details">
                     <summary class="party__details-summary">開催詳細を見る</summary>
@@ -356,7 +333,7 @@
                       </div>
                       <span class="btn btn--small btn--disabled" aria-disabled="true">申し込み準備中</span>
                       <p class="party__flyer-link">
-                        <a class="text-link" href="flyer-party-chiba.html" target="_blank" rel="noopener noreferrer">フライヤーを見る（Vol.1・千葉）</a>
+                        <a class="text-link" href="flyer-party-chiba.html" target="_blank" rel="noopener noreferrer" aria-label="フライヤーを見る（Vol.1・千葉・新しいタブで開く）">フライヤーを見る（Vol.1・千葉）</a>
                       </p>
                     </div>
                   </details>
@@ -389,7 +366,7 @@
           </header>
           <div class="block__body">
             <p>取材・講演・その他のご依頼は、専用フォームよりお願いします。</p>
-            <a class="btn btn--primary" href="https://ws.formzu.net/fgen/S49122399/" target="_blank" rel="noopener noreferrer">フォームを開く</a>
+            <a class="btn btn--primary" href="https://ws.formzu.net/fgen/S49122399/" target="_blank" rel="noopener noreferrer" aria-label="フォームを開く（新しいタブで開く）">フォームを開く</a>
           </div>
         </div>
       </section>
@@ -410,7 +387,7 @@
       </span>
     </p>
     <p class="site-footer__sub">
-      <a href="https://ameblo.jp/kyarispo/" target="_blank" rel="noopener noreferrer">ブログ：キャリアのパワスポ</a>
+      <a href="https://ameblo.jp/kyarispo/" target="_blank" rel="noopener noreferrer" aria-label="ブログ：キャリアのパワスポ（新しいタブで開く）">ブログ：キャリアのパワスポ</a>
     </p>
   </footer>
 

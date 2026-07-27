@@ -1,6 +1,5 @@
 /* ============================================================
-   とりあえず研究所 — デザイン候補
-   案1 藍墨 / 案2 杜 / 案3 鉛白（色・フォント）
+   とりあえず研究所 — 採用テーマ：案2 杜
    ============================================================ */
 
 *,
@@ -44,8 +43,7 @@ a {
 }
 
 .btn:focus-visible,
-.nav-toggle:focus-visible,
-.chooser__tab:focus-visible {
+.nav-toggle:focus-visible {
   outline-offset: 2px;
 }
 
@@ -75,38 +73,8 @@ p {
   margin: 0 0 1rem;
 }
 
-/* ---------- Theme tokens ---------- */
+/* ---------- Theme tokens（案2 杜） ---------- */
 
-/* 案1 藍墨 — 知性と静けさ。紺インク × 涼しい霧 */
-body[data-theme="aisumi"] {
-  --font-display: "Shippori Mincho", "Hiragino Mincho ProN", serif;
-  --font-body: "IBM Plex Sans JP", "Hiragino Sans", sans-serif;
-  --bg: #eef1f6;
-  --bg-elevated: #f7f8fb;
-  --ink: #1a2332;
-  --ink-muted: #5a6578;
-  --brand: #1e3a5f;
-  --accent: #3d6b9a;
-  --accent-soft: rgba(61, 107, 154, 0.14);
-  --line: rgba(30, 58, 95, 0.14);
-  --hero-veil: linear-gradient(
-    105deg,
-    rgba(14, 28, 48, 0.88) 0%,
-    rgba(14, 28, 48, 0.55) 48%,
-    rgba(14, 28, 48, 0.25) 100%
-  );
-  --hero-image: linear-gradient(160deg, #2a4a6e 0%, #1a2f4a 40%, #0f1c2e 100%);
-  --book-cover-bg: linear-gradient(160deg, #1e3a5f, #2f5578);
-  --header-bg: rgba(238, 241, 246, 0.88);
-  --party-bg: #e4e9f1;
-  --footer-bg: #1a2332;
-  --footer-ink: #eef1f6;
-  --radius: 2px;
-  --shadow-btn: 0 1px 0 rgba(255, 255, 255, 0.12) inset;
-  --hero-image-tint: rgba(20, 40, 70, 0.42);
-}
-
-/* 案2 杜 — 落ち着いた緑。キャンパス／研究の生命感 */
 body[data-theme="mori"] {
   --font-display: "Zen Old Mincho", "Hiragino Mincho ProN", serif;
   --font-body: "Noto Sans JP", "Hiragino Sans", sans-serif;
@@ -133,114 +101,6 @@ body[data-theme="mori"] {
   --radius: 2px;
   --shadow-btn: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
   --hero-image-tint: rgba(18, 45, 32, 0.48);
-}
-
-/* 案3 鉛白 — 現代的なグレー。明朝見出し × 角ゴシック本文 */
-body[data-theme="enpaku"] {
-  --font-display: "Noto Serif JP", "Hiragino Mincho ProN", serif;
-  --font-body: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
-  --bg: #eceaeb;
-  --bg-elevated: #f5f3f3;
-  --ink: #22201f;
-  --ink-muted: #6a6562;
-  --brand: #2c2a29;
-  --accent: #8b3a3a;
-  --accent-soft: rgba(139, 58, 58, 0.12);
-  --line: rgba(44, 42, 41, 0.12);
-  --hero-veil: linear-gradient(
-    105deg,
-    rgba(28, 26, 25, 0.9) 0%,
-    rgba(28, 26, 25, 0.58) 48%,
-    rgba(28, 26, 25, 0.28) 100%
-  );
-  --hero-image: linear-gradient(160deg, #5a5552 0%, #353230 42%, #1c1a19 100%);
-  --book-cover-bg: linear-gradient(160deg, #2c2a29, #5a3a3a);
-  --header-bg: rgba(236, 234, 235, 0.9);
-  --party-bg: #e3e0e0;
-  --footer-bg: #22201f;
-  --footer-ink: #eceaeb;
-  --radius: 0;
-  --shadow-btn: none;
-  --hero-image-tint: rgba(30, 26, 24, 0.5);
-}
-
-/* ---------- Chooser (preview only) ---------- */
-
-.chooser {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  padding: 0.75rem 1.25rem 0.9rem;
-  background: #111827;
-  color: #f9fafb;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.chooser__label {
-  margin: 0 0 0.5rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #9ca3af;
-  font-family: system-ui, sans-serif;
-}
-
-.chooser__tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.chooser__tab {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.45rem 0.85rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 999px;
-  background: transparent;
-  color: #e5e7eb;
-  font-size: 0.85rem;
-  font-family: system-ui, sans-serif;
-  cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease;
-}
-
-.chooser__tab:hover {
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.chooser__tab.is-active {
-  background: #f9fafb;
-  color: #111827;
-  border-color: #f9fafb;
-}
-
-.chooser__swatch {
-  width: 0.85rem;
-  height: 0.85rem;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.chooser__swatch--aisumi {
-  background: linear-gradient(135deg, #1e3a5f, #3d6b9a);
-}
-
-.chooser__swatch--mori {
-  background: linear-gradient(135deg, #1f3d32, #3d6b52);
-}
-
-.chooser__swatch--enpaku {
-  background: linear-gradient(135deg, #2c2a29, #8b3a3a);
-}
-
-.chooser__note {
-  margin: 0.65rem 0 0;
-  font-size: 0.8rem;
-  color: #d1d5db;
-  font-family: system-ui, sans-serif;
-  line-height: 1.5;
 }
 
 /* ---------- Header ---------- */
@@ -479,24 +339,6 @@ body[data-theme="enpaku"] {
       rgba(18, 36, 28, 0.94) 100%
     );
   }
-
-  body[data-theme="aisumi"] .hero__veil {
-    background: linear-gradient(
-      180deg,
-      rgba(14, 28, 48, 0.72) 0%,
-      rgba(14, 28, 48, 0.88) 55%,
-      rgba(14, 28, 48, 0.94) 100%
-    );
-  }
-
-  body[data-theme="enpaku"] .hero__veil {
-    background: linear-gradient(
-      180deg,
-      rgba(28, 26, 24, 0.72) 0%,
-      rgba(28, 26, 24, 0.88) 55%,
-      rgba(28, 26, 24, 0.94) 100%
-    );
-  }
 }
 
 .hero__veil {
@@ -559,10 +401,12 @@ body[data-theme="enpaku"] {
 }
 
 .hero__title {
+  font-family: var(--font-display);
   font-size: clamp(1.35rem, 3.2vw, 2rem);
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   letter-spacing: 0.06em;
+  line-height: 1.45;
 }
 
 .hero__lead {
@@ -744,7 +588,7 @@ body[data-theme="enpaku"] {
 .profile__portrait {
   margin: 0;
   position: sticky;
-  top: 5.5rem;
+  top: 5rem;
 }
 
 @media (max-width: 800px) {
@@ -797,8 +641,12 @@ body[data-theme="enpaku"] {
 
 .profile__bio {
   color: var(--ink-muted);
-  margin-bottom: 1.75rem;
+  margin: 0 0 0.85rem;
   max-width: 36em;
+}
+
+.profile__bio:last-of-type {
+  margin-bottom: 1.75rem;
 }
 
 .profile__links {
