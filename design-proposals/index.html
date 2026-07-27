@@ -51,9 +51,18 @@
         <span class="wordmark__en">TORIAEZU INSTITUTE</span>
       </span>
     </a>
-    <nav class="nav" aria-label="メイン">
+    <button
+      type="button"
+      class="nav-toggle"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      aria-label="メニューを開く"
+    >
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="メイン">
       <a href="#about">研究所紹介</a>
-      <a href="#profile">役員</a>
+      <a href="#profile">理事長</a>
       <a href="#research">研究・実績</a>
       <a href="#party">パーティ</a>
       <a href="#contact">お問い合わせ</a>
@@ -233,7 +242,7 @@
             <h2>出版記念パーティ</h2>
           </header>
           <div class="block__body">
-            <p class="party__lead">全3回を予定。第1回の日時・会場が確定しました。各回とも Formzu からお申し込みください。</p>
+            <p class="party__lead">全3回を予定。第1回の日時・会場が確定しました。お申し込み受付は準備中です。</p>
             <ul class="party__list">
               <li class="party__item party__item--detailed">
                 <span class="party__num">第1回</span>
@@ -246,7 +255,7 @@
                     参加費 1,000円（パーティー参加は別途 4,000円・事前予約）／対象：中嶌ゼミ卒業生・関係者、養成講座修了生、ゲストスピーカー
                   </p>
                   <div class="party__actions">
-                    <a class="btn btn--small" href="#">申し込む</a>
+                    <span class="btn btn--small btn--disabled" aria-disabled="true">申し込み準備中</span>
                     <a class="text-link" href="flyer-party-chiba.html" target="_blank" rel="noopener noreferrer">フライヤー</a>
                   </div>
                   <details class="party__details">
@@ -301,7 +310,7 @@
                           <li>特製グッズも配布予定です</li>
                         </ul>
                       </div>
-                      <a class="btn btn--small" href="#">申し込む</a>
+                      <span class="btn btn--small btn--disabled" aria-disabled="true">申し込み準備中</span>
                       <p class="party__flyer-link">
                         <a class="text-link" href="flyer-party-chiba.html" target="_blank" rel="noopener noreferrer">フライヤーを見る（Vol.1・千葉）</a>
                       </p>
@@ -309,18 +318,18 @@
                   </details>
                 </div>
               </li>
-              <li class="party__item">
+              <li class="party__item party__item--pending">
                 <span class="party__num">第2回</span>
                 <div>
-                  <p class="party__meta">日程・会場（仮）</p>
-                  <a class="btn btn--small" href="#">申し込む</a>
+                  <p class="party__meta">日程・会場は調整中です</p>
+                  <p class="party__status">申し込み開始前</p>
                 </div>
               </li>
-              <li class="party__item">
+              <li class="party__item party__item--pending">
                 <span class="party__num">第3回</span>
                 <div>
-                  <p class="party__meta">日程・会場（仮）</p>
-                  <a class="btn btn--small" href="#">申し込む</a>
+                  <p class="party__meta">日程・会場は調整中です</p>
+                  <p class="party__status">申し込み開始前</p>
                 </div>
               </li>
             </ul>
