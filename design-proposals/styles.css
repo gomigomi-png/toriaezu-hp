@@ -891,7 +891,7 @@ body.is-nav-lock {
 }
 
 .party__meta {
-  margin: 0 0 0.65rem;
+  margin: 0 0 0.35rem;
   color: var(--ink-muted);
   font-size: 0.92rem;
   display: flex;
@@ -900,7 +900,8 @@ body.is-nav-lock {
 }
 
 .party__when,
-.party__where {
+.party__where,
+.party__snapshot {
   display: block;
   line-height: 1.5;
 }
@@ -919,11 +920,15 @@ body.is-nav-lock {
 }
 
 .party__snapshot {
+  color: var(--ink-muted);
+  max-width: 40em;
+}
+
+.party__deadline {
   margin: 0 0 0.85rem;
   color: var(--ink-muted);
   font-size: 0.88rem;
-  line-height: 1.65;
-  max-width: 40em;
+  line-height: 1.5;
 }
 
 .party__actions {
