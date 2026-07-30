@@ -50,10 +50,8 @@ a {
   outline-offset: 2px;
 }
 
-@media (min-width: 721px) {
-  .hero .btn--ghost:focus-visible {
-    outline-color: #fff;
-  }
+.hero .btn--ghost:focus-visible {
+  outline-color: #fff;
 }
 
 .party__details-summary:focus-visible {
@@ -318,92 +316,30 @@ body.is-nav-lock {
 .hero__media {
   position: absolute;
   inset: 0;
-  background: var(--hero-image);
 }
 
-.hero__backdrop {
+.hero__image {
   position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 70% 55% at 72% 42%, rgba(255, 255, 255, 0.1), transparent 58%),
-    var(--hero-image);
-}
-
-.hero__book {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: min(52vw, 34rem);
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  filter: drop-shadow(-18px 0 40px rgba(0, 0, 0, 0.28));
+  inset: -4%;
+  background-color: #1a2f4a;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(255, 255, 255, 0.08), transparent 55%),
+    linear-gradient(var(--hero-image-tint, rgba(20, 35, 55, 0.35)), var(--hero-image-tint, rgba(20, 35, 55, 0.35))),
+    url("images/hero-library.jpg");
+  background-size: cover;
+  background-position: center 40%;
   animation: hero-drift 28s ease-in-out infinite alternate;
 }
 
-@media (max-width: 720px) {
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    min-height: 0;
-    color: var(--ink);
-    background: var(--bg);
-  }
-
-  .hero__content {
-    order: 1;
-    max-width: none;
-    padding: 2rem clamp(1.25rem, 4vw, 3rem) 1.5rem;
-  }
-
-  .hero__media {
-    position: relative;
-    order: 2;
-    inset: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem 1.25rem 2.25rem;
-    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated) 100%);
-  }
-
-  .hero__backdrop,
-  .hero__veil {
-    display: none;
-  }
-
-  .hero__book {
-    position: relative;
-    inset: auto;
-    width: min(58%, 13.5rem);
-    height: auto;
-    object-fit: contain;
-    object-position: center top;
-    opacity: 1;
-    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.18));
-    animation: none;
-  }
-
-  .hero__lead {
-    color: var(--ink-muted);
-  }
-
-  .hero .btn--primary {
-    background: var(--accent);
-    color: #fff;
-  }
-
-  .hero .btn--ghost {
-    border-color: color-mix(in srgb, var(--brand) 28%, transparent);
-    color: var(--brand);
-    background: transparent;
-  }
-
-  .hero .btn--ghost:hover {
-    background: var(--accent-soft);
-  }
+.hero__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.35;
 }
 
 .hero__veil {
@@ -538,21 +474,19 @@ body.is-nav-lock {
   filter: brightness(1.08);
 }
 
-@media (min-width: 721px) {
-  .hero .btn--primary {
-    background: #fff;
-    color: var(--brand);
-  }
+.hero .btn--primary {
+  background: #fff;
+  color: var(--brand);
+}
 
-  .hero .btn--ghost {
-    border-color: rgba(255, 255, 255, 0.45);
-    color: #fff;
-    background: transparent;
-  }
+.hero .btn--ghost {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
+  background: transparent;
+}
 
-  .hero .btn--ghost:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
+.hero .btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .btn--small {
@@ -1226,8 +1160,7 @@ body,
 .block,
 .site-footer,
 .btn,
-.hero__backdrop,
-.hero__book,
+.hero__image,
 .hero__veil,
 .book__cover-img,
 .profile__photo {
