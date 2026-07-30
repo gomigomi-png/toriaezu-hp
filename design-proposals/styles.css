@@ -91,9 +91,9 @@ body[data-theme="mori"] {
   --line: rgba(31, 61, 50, 0.14);
   --hero-veil: linear-gradient(
     105deg,
-    rgba(18, 36, 28, 0.9) 0%,
-    rgba(18, 36, 28, 0.58) 48%,
-    rgba(18, 36, 28, 0.28) 100%
+    rgba(18, 36, 28, 0.72) 0%,
+    rgba(18, 36, 28, 0.42) 48%,
+    rgba(18, 36, 28, 0.18) 100%
   );
   --hero-image: linear-gradient(160deg, #3a5c48 0%, #243d32 42%, #14241c 100%);
   --book-cover-bg: linear-gradient(160deg, #1f3d32, #3d6b52);
@@ -103,7 +103,7 @@ body[data-theme="mori"] {
   --footer-ink: #f0f2ee;
   --radius: 2px;
   --shadow-btn: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
-  --hero-image-tint: rgba(18, 45, 32, 0.48);
+  --hero-image-tint: rgba(18, 45, 32, 0.28);
 }
 
 /* ---------- Header ---------- */
@@ -323,9 +323,9 @@ body.is-nav-lock {
   inset: -4%;
   background-color: #1a2f4a;
   background-image:
-    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(255, 255, 255, 0.08), transparent 55%),
-    linear-gradient(var(--hero-image-tint, rgba(20, 35, 55, 0.35)), var(--hero-image-tint, rgba(20, 35, 55, 0.35))),
-    url("images/hero-library.jpg");
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(255, 255, 255, 0.06), transparent 55%),
+    linear-gradient(var(--hero-image-tint, rgba(20, 35, 55, 0.28)), var(--hero-image-tint, rgba(20, 35, 55, 0.28))),
+    url("./images/hero-library.jpg");
   background-size: cover;
   background-position: center 40%;
   animation: hero-drift 28s ease-in-out infinite alternate;
@@ -891,7 +891,7 @@ body.is-nav-lock {
 }
 
 .party__meta {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.85rem;
   color: var(--ink-muted);
   font-size: 0.92rem;
   display: flex;
@@ -901,7 +901,8 @@ body.is-nav-lock {
 
 .party__when,
 .party__where,
-.party__snapshot {
+.party__snapshot,
+.party__deadline {
   display: block;
   line-height: 1.5;
 }
@@ -919,16 +920,17 @@ body.is-nav-lock {
   min-width: 0;
 }
 
-.party__snapshot {
+.party__snapshot,
+.party__deadline {
   color: var(--ink-muted);
   max-width: 40em;
 }
 
 .party__deadline {
-  margin: 0 0 0.85rem;
-  color: var(--ink-muted);
-  font-size: 0.88rem;
-  line-height: 1.5;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
 }
 
 .party__actions {
