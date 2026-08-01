@@ -1140,6 +1140,10 @@ body.is-nav-lock {
   justify-content: center;
 }
 
+.wordmark--footer .wordmark__name {
+  color: var(--footer-ink);
+}
+
 .wordmark--footer .wordmark__logo {
   filter: none;
   opacity: 0.95;
