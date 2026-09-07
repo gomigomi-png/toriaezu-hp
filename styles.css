@@ -1141,6 +1141,7 @@ body.is-nav-lock {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.85rem 0.75rem;
+  align-items: start;
 }
 
 .party__gallery figure {
@@ -1150,20 +1151,14 @@ body.is-nav-lock {
 .party__gallery img {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: center;
+  max-width: 100%;
+  display: block;
   background: var(--bg-elevated);
   border: 1px solid var(--line);
 }
 
 .party__gallery-item--wide {
   grid-column: 1 / -1;
-}
-
-.party__gallery-item--wide img {
-  aspect-ratio: 16 / 5;
-  object-position: center;
 }
 
 .party__gallery figcaption {
@@ -1181,10 +1176,6 @@ body.is-nav-lock {
 @media (max-width: 560px) {
   .party__gallery {
     grid-template-columns: 1fr;
-  }
-
-  .party__gallery-item--wide img {
-    aspect-ratio: 16 / 7;
   }
 }
 
