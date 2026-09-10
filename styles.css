@@ -574,9 +574,15 @@ body.is-nav-lock {
 
 .profile__layout {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: clamp(1.5rem, 4vw, 2.75rem);
+  grid-template-columns: 13rem minmax(0, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 0.9rem;
   align-items: start;
+}
+
+.profile__portrait {
+  margin: 0;
+  width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -584,11 +590,14 @@ body.is-nav-lock {
     grid-template-columns: 1fr;
     max-width: 36em;
   }
-}
 
-.profile__portrait {
-  margin: 0;
-  width: min(100%, 11rem);
+  .profile__portrait {
+    width: min(100%, 13rem);
+  }
+
+  .profile__body {
+    padding-top: 1.1rem;
+  }
 }
 
 .profile__photo {
