@@ -108,6 +108,10 @@ body[data-theme="mori"] {
 
 /* ---------- Header ---------- */
 
+html {
+  scroll-padding-top: 5.5rem;
+}
+
 .site-header {
   display: flex;
   align-items: center;
@@ -573,6 +577,8 @@ body.is-nav-lock {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  gap: 0.45rem;
 }
 
 .updates__list a {
