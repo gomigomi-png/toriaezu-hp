@@ -1564,6 +1564,10 @@ body.is-nav-lock {
   color: var(--ink-muted);
 }
 
+.contact__mail {
+  margin-top: 1.25rem;
+}
+
 .site-footer {
   padding: 2.5rem clamp(1.25rem, 4vw, 3rem);
   background: var(--footer-bg);
