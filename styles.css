@@ -1519,6 +1519,23 @@ body.is-nav-lock {
   max-width: 40em;
 }
 
+.report__subhead {
+  margin: 0 0 0.45rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+
+.report__voices {
+  margin: 0 0 1.25rem;
+  padding-left: 1.2em;
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 40em;
+}
+
 .report__gallery {
   list-style: none;
   margin: 0;
