@@ -501,6 +501,16 @@ body.is-nav-lock {
   background: rgba(255, 255, 255, 0.1);
 }
 
+.btn--accent {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: var(--shadow-btn);
+}
+
+.btn--accent:hover {
+  filter: brightness(1.08);
+}
+
 .btn--small {
   padding: 0.55rem 1rem;
   font-size: 0.8rem;
@@ -1574,6 +1584,64 @@ body.is-nav-lock {
 @media (max-width: 560px) {
   .report__gallery {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Outreach ---------- */
+
+.outreach__lead {
+  margin: 0 0 1.75rem;
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 40em;
+}
+
+.outreach__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 2rem;
+}
+
+.outreach__block {
+  margin-bottom: 1.5rem;
+}
+
+.outreach__title {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+
+.outreach__steps {
+  margin: 0;
+  padding-left: 1.4em;
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.outreach__steps li {
+  margin-bottom: 0.4rem;
+}
+
+.outreach__actions {
+  margin-top: 0.5rem;
+}
+
+.outreach__note {
+  margin: 1rem 0 0;
+  color: var(--ink-muted);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 560px) {
+  .outreach__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 }
 
